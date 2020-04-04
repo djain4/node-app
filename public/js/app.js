@@ -12,6 +12,7 @@ const getForecast  = (address) => {
     successEle.innerHTML = "Loading...";
     successEle.style.display = "block";
 
+
     fetch('/weather?address=' + address).then((respose) => {
         respose.json().then((data) => {
             if(data.error) {
